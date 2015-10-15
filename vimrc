@@ -24,11 +24,6 @@ colorscheme ron
 let html_no_rendering = 1
 syntax on
 
-" Simple save
-
-map <C-s> <Esc>:wa<CR>
-imap <C-s> <Esc>:wa<CR>
-
 "" Plugins settings
 
 " NERD Tree
