@@ -24,13 +24,16 @@ colorscheme ron
 let html_no_rendering = 1
 syntax on
 
+" Simple save
+
+map <C-s> <Esc>:wa<CR>
+imap <C-s> <Esc>:wa<CR>
+
 "" Plugins settings
 
 " NERD Tree
 
-map <C-e> :NERDTreeToggle<CR>
-map <leader>n :NERDTreeToggle<CR>
-map <leader>f :NERDTreeFind<CR>
+map <C-l> :NERDTreeToggle<CR>
 
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 let NERDTreeQuitOnOpen=1
