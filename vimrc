@@ -20,6 +20,7 @@ set shiftwidth=2
 set backspace=2
 set autoindent
 set expandtab
+set number
 colorscheme ron
 let html_no_rendering = 1
 syntax on
@@ -43,4 +44,4 @@ let g:NERDTreeWinSize = 40
 
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_extensions = ['tag']
-let g:ctrlp_custom_ignore = {'dir':  'vendor/bundler$\|\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
+let g:ctrlp_custom_ignore = {'dir':  'vendor/bundler$\|target$\|\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
