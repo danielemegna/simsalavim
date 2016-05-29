@@ -11,7 +11,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'mileszs/ack.vim'
+"Bundle 'mileszs/ack.vim'
 
 " General Config
 
