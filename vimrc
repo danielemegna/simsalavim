@@ -1,20 +1,17 @@
 set nocompatible
 
 " Vundle
-
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Bundles
-
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-"Bundle 'mileszs/ack.vim'
+" Plugins
+Plugin 'gmarik/vundle'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'elixir-lang/vim-elixir'
 
 " General Config
-
 set tabstop=2
 set shiftwidth=2
 set backspace=2
@@ -28,9 +25,7 @@ syntax on
 "" Plugins settings
 
 " NERD Tree
-
 map <C-l> :NERDTreeToggle<CR>
-
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
@@ -42,7 +37,6 @@ let g:NERDTreeWinSize = 40
 let g:NERDTreeHijackNetrw=0
 
 " CtrlP
-
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_extensions = ['tag']
 let g:ctrlp_custom_ignore = {'dir':  'vendor/bundler$\|target$\|\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
