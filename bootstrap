@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+path="$HOME/.simsalavim"
 
 if [ -e $path/.git ]; then
     cd $path && git pull
@@ -8,10 +8,10 @@ else
     git clone https://github.com/danielemegna/simsalavim.git $path
 fi
 
-if [ ! -e $HOME/.vim/autoload/plug.vim ]; then
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [ ! -e $HOME/.vim/bundle/vundle ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
 
 ln -sf $path/vimrc ~/.vimrc
 
-vim - +PlugUpgrade +PlugInstall +PlugUpdate +PlugClean +qall
+vim - +PluginInstall! +PluginClean! +qall
