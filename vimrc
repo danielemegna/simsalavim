@@ -2,25 +2,27 @@ set nocompatible
 
 " Vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Plugins
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'elixir-lang/vim-elixir'
 
+call vundle#end()
+filetype plugin on
+
 " General Config
+syntax on
+set number
+set autoindent
+set expandtab
 set tabstop=2
 set shiftwidth=2
 set backspace=2
-set autoindent
-set expandtab
-set number
-colorscheme ron
 let html_no_rendering = 1
-syntax on
 
 "" Plugins settings
 
