@@ -42,3 +42,4 @@ let g:NERDTreeHijackNetrw=0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_extensions = ['tag']
 let g:ctrlp_custom_ignore = {'dir':  'vendor/bundler$\|target$\|\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
