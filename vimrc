@@ -23,6 +23,7 @@ set tabstop=2
 set shiftwidth=2
 set backspace=2
 let html_no_rendering = 1
+colorscheme ron
 
 "" Plugins settings
 
