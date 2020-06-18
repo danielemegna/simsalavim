@@ -10,6 +10,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'udalov/kotlin-vim'
 
 call vundle#end()
 filetype plugin on
@@ -23,6 +24,8 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set backspace=2
+set nowrap
+set showcmd
 let html_no_rendering = 1
 colorscheme ron
 
