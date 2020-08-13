@@ -42,6 +42,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeChDirMode = 2
 let g:NERDTreeWinSize = 40
 let g:NERDTreeHijackNetrw=0
+autocmd BufWinEnter * NERDTreeMirror
 
 " CtrlP
 let g:ctrlp_working_path_mode = 0
