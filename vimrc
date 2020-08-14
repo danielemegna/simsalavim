@@ -32,7 +32,16 @@ colorscheme ron
 "" Plugins settings
 
 " NERD Tree
-map <C-l> :NERDTreeToggle<CR>
+function MyNerdToggle()
+  if &filetype == 'nerdtree' || &filetype == ''
+    :NERDTreeToggle
+  else
+    :NERDTreeFind
+    ":silent NERDTreeMirror
+  endif
+endfunction
+
+noremap <C-l> :call MyNerdToggle()<CR>
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
@@ -42,7 +51,6 @@ let NERDTreeDirArrows = 1
 let NERDTreeChDirMode = 2
 let g:NERDTreeWinSize = 40
 let g:NERDTreeHijackNetrw=0
-autocmd BufWinEnter * NERDTreeMirror
 
 " CtrlP
 let g:ctrlp_working_path_mode = 0
