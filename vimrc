@@ -12,6 +12,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'udalov/kotlin-vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-abolish'
 
 call vundle#end()
 filetype plugin on
