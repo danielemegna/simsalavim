@@ -10,7 +10,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'udalov/kotlin-vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-abolish'
 
