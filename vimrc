@@ -12,6 +12,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-abolish'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()
 filetype plugin on
@@ -29,8 +30,11 @@ set nowrap
 set showcmd
 set timeout timeoutlen=3000 " increase leaderkey timeout
 set updatetime=500 " increase refresh rate
+set autoread
+set exrc " enable project .vimrc autoload
+"set secure " disable shell, autocmd and write commands in project .vimrc
 let html_no_rendering = 1
-colorscheme ron
+colorscheme elflord
 
 "" Plugins settings
 
