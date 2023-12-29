@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-abolish'
+"Plug 'tpope/vim-repeat'
 "Plug 'arcticicestudio/nord-vim'
 "Plug 'dense-analysis/ale'
 "Plug 'kien/ctrlp.vim'
