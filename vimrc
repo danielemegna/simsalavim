@@ -1,69 +1,57 @@
-set nocompatible
+" ---- Vim plug
 
-" Vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
 
 " Plugins
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-abolish'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-abolish'
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'dense-analysis/ale'
+"Plug 'kien/ctrlp.vim'
+"Plug 'scrooloose/nerdtree'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 
-call vundle#end()
-filetype plugin on
+call plug#end()
+
+" ---- Vim settings
 
 " General Config
-syntax on
 set number
+set nowrap
+set showcmd
+set title
+set autoread
+set encoding=utf-8
+"set updatetime=500 " increase refresh rate
+"set timeout timeoutlen=3000 " increase leaderkey timeout
+"set exrc " enable project .vimrc autoload
+"set secure " disable shell, autocmd and write commands in project .vimrc
+
+" Indentation
 set autoindent
 set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set backspace=2
-set nowrap
-set showcmd
-set timeout timeoutlen=3000 " increase leaderkey timeout
-set updatetime=500 " increase refresh rate
-set autoread
-"set exrc " enable project .vimrc autoload
-"set secure " disable shell, autocmd and write commands in project .vimrc
+
+" Colors
 let html_no_rendering = 1
-colorscheme elflord
+set background=dark
+"colorscheme elflord
 
-"" Plugins settings
+" Scrolling
+"set scrolloff=8
+"set sidescrolloff=15
+"set sidescroll=1
 
-" NERD Tree
-function MyNerdToggle()
-  if &filetype == 'nerdtree' || &filetype == ''
-    :NERDTreeToggle
-  else
-    :NERDTreeFind
-    ":silent NERDTreeMirror
-  endif
-endfunction
-
-noremap <C-l> :call MyNerdToggle()<CR>
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-let NERDTreeQuitOnOpen=1
-let NERDTreeShowHidden=1
-let NERDTreeHighlightCursorline=1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeChDirMode = 2
-let g:NERDTreeWinSize = 40
-let g:NERDTreeHijackNetrw=0
-
-" CtrlP
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_extensions = ['tag']
-let g:ctrlp_custom_ignore = {'dir':  'vendor/bundler$\|target$\|\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$' }
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+"" ---- Plugins settings
 
 " GitGutter
 let g:gitgutter_override_sign_column_highlight = 0
@@ -72,3 +60,4 @@ highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
 highlight GitGutterDelete ctermfg=1
 highlight GitGutterChangeDelete ctermfg=4
+
