@@ -28,7 +28,6 @@ set showcmd
 set title
 set autoread
 set encoding=utf-8
-"set updatetime=500 " increase refresh rate
 "set timeout timeoutlen=3000 " increase leaderkey timeout
 "set exrc " enable project .vimrc autoload
 "set secure " disable shell, autocmd and write commands in project .vimrc
@@ -54,6 +53,7 @@ set background=dark
 "" ---- Plugins settings
 
 " GitGutter
+set updatetime=500 " increase plugins refresh rate
 let g:gitgutter_override_sign_column_highlight = 0
 highlight clear SignColumn
 highlight GitGutterAdd ctermfg=2
