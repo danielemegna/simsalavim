@@ -56,6 +56,9 @@ set background=dark
 " GitGutter
 set updatetime=500 " increase plugins refresh rate
 let g:gitgutter_override_sign_column_highlight = 0
+nmap ]p <Plug>(GitGutterPreviewHunk)  " remap preview
+nmap ]u <Plug>(GitGutterUndoHunk)     " remap undo
+nmap ]a <Plug>(GitGutterStageHunk)    " remap add
 highlight clear SignColumn
 highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
