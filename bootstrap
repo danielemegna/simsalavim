@@ -3,7 +3,7 @@
 path="$HOME/.simsalavim"
 
 if [ -e $path/.git ]; then
-    cd $path && git pull
+    cd $path && git pull --rebase --autostash
 else
     git clone https://github.com/danielemegna/simsalavim.git $path
 fi
