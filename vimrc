@@ -51,6 +51,9 @@ set background=dark
 "set sidescrolloff=15
 "set sidescroll=1
 
+"" ---- Remap
+vnoremap p pgvy " yank again after paste on visual
+
 "" ---- Plugins settings
 
 " GitGutter
