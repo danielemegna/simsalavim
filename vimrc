@@ -29,6 +29,7 @@ set showcmd
 set title
 set autoread
 set encoding=utf-8
+set shortmess-=S  "remove 'S' flag to show the search count message when searching => [1/5]
 "set timeout timeoutlen=3000 " increase leaderkey timeout
 "set exrc " enable project .vimrc autoload
 "set secure " disable shell, autocmd and write commands in project .vimrc
