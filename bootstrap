@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 path="$HOME/.simsalavim"
 
 if [ -e $path/.git ]; then
@@ -14,4 +16,4 @@ fi
 
 ln -sf $path/vimrc ~/.vimrc
 
-vim - +PlugUpgrade +PlugInstall +PlugUpdate +PlugClean +qall
+vim +PlugUpgrade +PlugInstall +PlugUpdate +PlugClean +qall
