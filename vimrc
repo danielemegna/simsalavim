@@ -53,7 +53,8 @@ set background=dark
 "set sidescroll=1
 
 "" ---- Remap
-vnoremap p pgvy " yank again after paste on visual
+" yank again after paste on visual
+vnoremap p pgvy 
 
 "" ---- Plugins settings
 
