@@ -59,6 +59,7 @@ vnoremap p pgvy " yank again after paste on visual
 
 " GitGutter
 set updatetime=500 " increase plugins refresh rate
+autocmd BufWritePost * GitGutter " refresh on save
 let g:gitgutter_override_sign_column_highlight = 0
 nmap ]p <Plug>(GitGutterPreviewHunk)  " remap preview
 nmap ]u <Plug>(GitGutterUndoHunk)     " remap undo
