@@ -1,6 +1,6 @@
 simsalavim
 ==========
 
-Personal vim distro
+Personal vim configuration
     
-    curl https://raw.github.com/danielemegna/simsalavim/master/bootstrap -L -o - | sh
+    sh -c "$(curl -sSL https://raw.github.com/danielemegna/simsalavim/master/bootstrap)"
