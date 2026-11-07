@@ -30,6 +30,7 @@ set title
 set autoread
 set encoding=utf-8
 set shortmess-=S  "remove 'S' flag to show the search count message when searching => [1/5]
+set re=0 "use the faster regular expression engine - fix 'redrawtime' exceeded
 "set timeout timeoutlen=3000 " increase leaderkey timeout
 "set exrc " enable project .vimrc autoload
 "set secure " disable shell, autocmd and write commands in project .vimrc
@@ -43,9 +44,11 @@ set shiftwidth=2
 set backspace=2
 
 " Colors
+syntax on
+"colorscheme elflord
 let html_no_rendering = 1
 set background=dark
-"colorscheme elflord
+filetype indent plugin on "limit / wrap / highlight long git commit messages
 
 " Scrolling
 "set scrolloff=8
